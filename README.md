@@ -24,11 +24,14 @@ Cybersec headlines
 something funny
 links
 
+
 Patch timelines:
 Windows
 Topdesk
 Microsoft Office
 links
+coming up this week
+Vendor, patch number, release date brief description
 
 _Display:_
 
@@ -54,5 +57,13 @@ Class
 - limit on size (length)
 - universal limit on width
 - divisor graphic
-- 
+
+NN/
+├── nn.py            # Main script
+├── network_health.py # Module for network health information
+├── csec_news.py  # Module for cybersecurity headlines
+├── patch_calendar.py # Module for patch timelines
+├── block_template.py # Template and utility functions for formatting
+└── utils.py         # Additional utilities if needed
+
 
