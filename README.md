@@ -54,5 +54,5 @@ Class
 - limit on size (length)
 - universal limit on width
 - divisor graphic
-
+- 
 
