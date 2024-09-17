@@ -1,9 +1,9 @@
 import math
-import keyboard
+# import keyboard
 
-if __name__ == "__main__":
-    print("hello world")
-    keyboard.wait('esc')
+# if __name__ == "__main__":
+#     print("hello world")
+#     keyboard.wait('esc')
 
 
 class Block():
@@ -21,3 +21,14 @@ class Block():
         for line in self.content:
             print(f"| {line.ljust(47)}|")
         print(f"|{'_'*48}|")
+
+
+
+
+
+
+
+
+
+
+

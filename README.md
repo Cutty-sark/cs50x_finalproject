@@ -59,11 +59,12 @@ Class
 - divisor graphic
 
 NN/
-├── nn.py            # Main script
+├──main.py            #main script
+├── nn.py             # block creator (formatting)
 ├── network_health.py # Module for network health information
-├── csec_news.py  # Module for cybersecurity headlines
+├── csec_news.py      # Module for cybersecurity headlines
 ├── patch_calendar.py # Module for patch timelines
 ├── block_template.py # Template and utility functions for formatting
-└── utils.py         # Additional utilities if needed
+└── utils.py          # Additional utilities if needed
 
 
