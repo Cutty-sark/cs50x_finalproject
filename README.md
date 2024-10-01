@@ -49,7 +49,7 @@ Tick list
 - Display current network speed.
 - Display Major Outages last 24 hours.
 - Get block /object set up. to repeat
-- Wor
+
 
 Class
 - print out
