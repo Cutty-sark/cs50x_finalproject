@@ -42,9 +42,9 @@ class CybersecHeadlines(Block):
         # then print the three to the entries. 
         print(len(thnfeed.entries))
         print(titlevector)
-        self.add_content(titlevector[2])
-        self.add_content(titlevector[3])
-        self.add_content(titlevector[4])
+        self.add_content("-" + titlevector[2])
+        self.add_content("-" + titlevector[3])
+        self.add_content("-" + titlevector[4])
         # self.add_content(titlevector[0])
         # self.add_content(titlevector[1])
         # self.add_content()

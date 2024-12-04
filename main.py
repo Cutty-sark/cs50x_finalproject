@@ -14,8 +14,11 @@ def main():
     network_block.gather_data()
 
     # Display the blocks
-    cybersec_block.display()
-    network_block.display()
+    # cybersec_block.display()
+    # network_block.display()
+    print(cybersec_block.render())
+    print(network_block.render())
+
 
 if __name__ == "__main__":
     main()
