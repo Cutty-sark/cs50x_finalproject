@@ -8,10 +8,11 @@ def main():
     # Create instances of blocks
     cybersec_block = CybersecHeadlines()
     network_block = NetworkHealth()
-
+    print("Loading...")
     # Gather data for each block
     cybersec_block.gather_data()
     network_block.gather_data()
+    print("Ingress complete, no errors.")
 
     # Display the blocks
     # cybersec_block.display()

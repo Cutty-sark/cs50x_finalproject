@@ -1,8 +1,25 @@
 # Network News
 #### Video Demo:
-#### Description: Command line tool that coalates network health, cybersec headlines, patch timelines. Extensible - can easily add additional blocks (objects) to report. 
+#### Description: Command line tool that coalates network health, cybersec headlines, p̶a̶t̶c̶h̶ t̶i̶m̶e̶l̶i̶n̶e̶s̶. Extensible - can easily add additional blocks (objects) to report. 
 
 This readme will differ slightly from the usual in that the project plan will be included.
+
+## Summary
+
+A readout of some headlines and network metrics.
+
+The program uses selenium, feedparser, speedtest, psutil among some other
+standard packages.
+
+The program is built to be extensible - using nn.py as a "block creator",
+it is a simple task to code a "block" and have it called in main without 
+obfuscating the code in main.py or in the nn.py. All formatting is dealt
+with in nn.py and the execution in main.py
+
+Thanks to https://outage.report and 
+https://feeds.feedburner.com/TheHackersNews
+
+for the external data.
 
 ## Project Plan
 
@@ -11,27 +28,15 @@ Building on a previous CLI project I made called Cappucino. Intended to be used 
 Extensiblility will be a big aim and the main improvement over Cappucino, which I will acheive through leveraging Python classes. I hope to do this via JSON file creation for each endpoint.
 
 #### Outline:
-The three starting areas, network health, cybersec and dev headlines, and patch timelines.
+The two starting areas- network health, cybersec headlines.
 
 Network health
-Local network outages past 24 hours.
+Current uptime
 Current network speed.
-Outages of major broadband providers past 24 hours.
-Top outages of all hosts/providers past 24 hours
+Outages of service providers in the past 24 hours.
 
 Cybersec headlines
-3 sources
-something funny
-links
-
-
-Patch timelines:
-Windows
-Topdesk
-Microsoft Office
-links
-coming up this week
-Vendor, patch number, release date brief description
+3 top headlines
 
 _Display:_
 
@@ -63,8 +68,6 @@ NN/
 ├── nn.py             # block creator (formatting)
 ├── network_health.py # Module for network health information
 ├── csec_news.py      # Module for cybersecurity headlines
-├── patch_calendar.py # Module for patch timelines
-├── block_template.py # Template and utility functions for formatting
 └── utils.py          # Additional utilities if needed
 
 

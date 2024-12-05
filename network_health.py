@@ -13,9 +13,9 @@ from datetime import datetime, timedelta
 
 #outages
 def scrape_outages():
-    """
-    Scrape outage data from Outage.Report for the last 24 hours.
-    """
+    
+    #Scrape outage data from Outage.Report for the last 24 hours.
+    
     url = "https://outage.report/"
     options = Options()
     options.add_argument("--headless")  # Enable headless mode for silent browsing
@@ -50,10 +50,9 @@ def scrape_outages():
                         outages.append(f"{service.text}: {description.text}")
                 except ValueError:
                     continue  # Skip any improperly formatted dates
-
                 if len(outages) >= 3:
                     break
-
+            print("Outages checked...")
         return outages if outages else ["No major outages found in the last 24 hours."]
     except (NoSuchElementException, TimeoutException) as e:
         return [f"Error scraping outages: {e}"]
@@ -61,12 +60,13 @@ def scrape_outages():
 
 #speedtest
 def get_network_speed():
-    """Measure the current network speed using Speedtest.net."""
+    #Measure the current network speed using Speedtest.net.
     try:
         st = speedtest.Speedtest()
         st.get_best_server()  # Select the best server
         download_speed = st.download() / 1_000_000  # Convert to Mbps
         upload_speed = st.upload() / 1_000_000  # Convert to Mbps
+        print("Network speed tested...")
         return f"Download: {download_speed:.2f} Mbps, Upload: {upload_speed:.2f} Mbps"
     except Exception as e:
         return f"Error measuring network speed: {e}"
@@ -86,9 +86,11 @@ def get_uptime():
         elapsed = datetime.now() - connected_since
         hours, remainder = divmod(elapsed.total_seconds(), 3600)
         minutes, seconds = divmod(remainder, 60)
+        print("Uptime calculated...")
         return f"{int(hours)}h {int(minutes)}m {int(seconds)}s"
     else:
         return "Not connected"
+
     
 
 
