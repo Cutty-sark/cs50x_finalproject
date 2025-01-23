@@ -1,5 +1,5 @@
 # Network News
-#### Video Demo:
+#### Video Demo: https://www.youtube.com/watch?v=qSnshzr52KA
 #### Description: Command line tool that coalates network health, cybersec headlines, patch timelines. Extensible - can easily add additional blocks (objects) to report. 
 
 This readme will differ slightly from the usual in that the project plan will be included.
